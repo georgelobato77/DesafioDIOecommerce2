@@ -1,0 +1,27 @@
+DELIMITER //
+
+CREATE PROCEDURE manipular_dados(
+    IN opcao INT,
+    IN id INT,
+    IN nome VARCHAR(50),
+    IN email VARCHAR(50),
+    IN senha VARCHAR(50)
+)
+BEGIN
+    CASE opcao
+        WHEN 1 THEN
+            -- Inserir novo usuário
+            INSERT INTO user (nome, email, senha, data_cadastro) VALUES (nome, email, MD5(senha), NOW());
+        WHEN 2 THEN
+            -- Atualizar usuário existente
+            UPDATE user SET nome = nome, email = email, senha = MD5(senha) WHERE id = id;
+        WHEN 3 THEN
+            -- Excluir usuário
+            DELETE FROM user WHERE id = id;
+        ELSE
+            -- Opção inválida
+            SELECT 'Opção inválida' AS Message_error;
+    END CASE;
+END //
+
+DELIMITER ;
