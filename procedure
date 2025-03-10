@@ -25,3 +25,12 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-- Inserir novo usuário
+CALL manipular_dados(1, NULL, 'João', 'joao@email.com', 'senha123');
+
+-- Atualizar usuário existente
+CALL manipular_dados(2, 1, 'João Silva', 'joao.silva@email.com', 'novaSenha123');
+
+-- Excluir usuário
+CALL manipular_dados(3, 1, NULL, NULL, NULL);
