@@ -1,0 +1,8 @@
+-- Índice para departamento com maior número de pessoas
+CREATE INDEX idx_departamento_id ON funcionarios(departamento_id);
+
+-- Índice para departamentos por cidade
+CREATE INDEX idx_cidade ON departamentos(cidade);
+
+-- Índice para relação de empresários por departamento
+CREATE INDEX idx_empresarios_departamento_id ON empresarios(departamento_id);
