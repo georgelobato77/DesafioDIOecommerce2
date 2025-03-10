@@ -1,0 +1,14 @@
+# Criação de Índices para Banco de Dados da Empresa
+
+Este projeto visa otimizar as consultas mais frequentes e relevantes em um banco de dados de uma empresa através da criação de índices. Os índices foram criados com base nas seguintes consultas:
+
+1. **Qual o departamento com maior número de pessoas?**
+   - Índice criado na coluna `departamento_id` da tabela `funcionarios`.
+
+2. **Quais são os departamentos por cidade?**
+   - Índice criado na coluna `cidade` da tabela `departamentos`.
+
+3. **Relação de empresários por departamento**
+   - Índice criado na coluna `departamento_id` da tabela `empresarios`.
+
+Os índices foram escolhidos para melhorar a performance das consultas, reduzindo o tempo de busca e otimizando o acesso aos dados mais relevantes.
