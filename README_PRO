@@ -1,0 +1,9 @@
+# Procedimento para Manipulação de Dados
+
+Este procedimento permite inserir, atualizar e excluir dados no banco de dados com base em uma variável de controle. O procedimento aceita as seguintes opções:
+
+1. **Inserir novo usuário**
+2. **Atualizar usuário existente**
+3. **Excluir usuário**
+
+O procedimento utiliza uma estrutura `CASE` para determinar a ação a ser realizada com base na variável `opcao`.
